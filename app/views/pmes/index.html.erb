@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pmes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Raison</th>
+      <th>Sector</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>State</th>
+      <th>Status</th>
+      <th>Contact</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pmes.each do |pme| %>
+      <tr>
+        <td><%= pme.designation %></td>
+        <td><%= pme.raison %></td>
+        <td><%= pme.sector %></td>
+        <td><%= pme.email %></td>
+        <td><%= pme.address %></td>
+        <td><%= pme.state %></td>
+        <td><%= pme.status %></td>
+        <td><%= pme.contact %></td>
+        <td><%= link_to 'Show', pme %></td>
+        <td><%= link_to 'Edit', edit_pme_path(pme) %></td>
+        <td><%= link_to 'Destroy', pme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pme', new_pme_path %>

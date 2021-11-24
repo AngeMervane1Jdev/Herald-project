@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @pme.designation %>
+</p>
+
+<p>
+  <strong>Raison:</strong>
+  <%= @pme.raison %>
+</p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @pme.sector %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @pme.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @pme.address %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @pme.state %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @pme.status %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @pme.contact %>
+</p>
+
+<%= link_to 'Edit', edit_pme_path(@pme) %> |
+<%= link_to 'Back', pmes_path %>

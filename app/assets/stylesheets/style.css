@@ -1,0 +1,243 @@
+#loader {
+    position: fixed ;
+    z-index:9999;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0px 0px -50px;
+   
+    }
+
+
+     
+
+    .body {
+      background-color: rgb(218, 228, 248);
+      
+      color: #000000;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+    }
+    .wizard-content-left {
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.45);
+      background-position: center center;
+      background-size: cover;
+      height: 160vh;
+      padding: 30px;
+    }
+    .wizard-content-left h1 {
+      color: #050505;
+      font-size: 38px;
+      font-weight: 600;
+      text-align: center;
+      font-weight: 700;
+      text-align: center;
+      font-size: 40px;
+      font-family: Hack, sans-serif;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #000, #fff, #000);
+      letter-spacing: 5px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      animation: shine 5s linear infinite;
+      position: relative;
+    }
+
+    
+      @keyframes shine {
+        0% {
+          background-position-x: -500%;
+        }
+        100% {
+          background-position-x: 500%;
+        }
+      }
+    
+      
+
+    .form-wizard {
+      color: #0a0a0a;
+      font-weight: 500;
+      padding: 30px;
+    }
+
+    .form-wizard-header p{
+    
+      font-family: monospace;
+      
+      color: #050505;
+      font-size: 38px;
+      font-weight: 600;
+      text-align: center;
+      font-weight: 700;
+      text-align: center;
+      font-size: 30px;
+      
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #000, #3a0ca3, #000);
+      letter-spacing: 5px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      position: relative;
+    }
+    .form-wizard .form-wizard-header {
+      text-align: center;
+    }
+    .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+      background-color: #3a0ca3;
+      color: #ffffff;
+      display: inline-block;
+      min-width: 100px;
+      min-width: 120px;
+      padding: 10px;
+      text-align: center;
+    }
+    .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
+      color: #ffffff;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+    .form-wizard .wizard-fieldset {
+      display: none;
+    }
+    .form-wizard .wizard-fieldset h5{
+        color: #3a0ca3;
+        font-weight: bold;
+        text-align: center;
+        font-family: monospace;
+      }
+    .form-wizard .wizard-fieldset.show {
+      display: block;
+    }
+    .form-wizard .wizard-form-error {
+      display: none;
+      background-color: #d70b0b;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+    }
+    .form-wizard .form-wizard-previous-btn {
+      background-color: #0e0d0d;
+    }
+    .form-wizard .form-control {
+      font-weight: 300;
+      height: auto !important;
+      padding: 15px;
+      color: #000000;
+      font-weight: 400;
+      background-color: #f1f1f1;
+      border: none;
+    }
+    .form-wizard .form-control:focus {
+      box-shadow: none;
+    }
+    .form-wizard .form-group {
+      position: relative;
+      margin: 25px 0;
+    
+    }
+
+    .form-wizard .wizard-form-text-label {
+      position: absolute;
+      left: 10px;
+      top: 16px;
+      transition: 0.2s linear all;
+    }
+    .form-wizard .focus-input .wizard-form-text-label {
+      color: #3a0ca3;
+      top: -20px;
+      transition: 0.2s linear all;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .form-wizard .form-wizard-steps {
+      margin: 30px 0;
+    }
+    .form-wizard .form-wizard-steps li {
+      width: 25%;
+      float: left;
+      position: relative;
+    }
+    .form-wizard .form-wizard-steps li::after {
+      background-color: #f3f3f3;
+      content: "";
+      height: 5px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      border-bottom: 1px solid #dddddd;
+      border-top: 1px solid #dddddd;
+    }
+    .form-wizard .form-wizard-steps li span {
+      background-color: #dddddd;
+      border-radius: 50%;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      position: relative;
+      text-align: center;
+      width: 40px;
+      z-index: 1;
+    }
+    .form-wizard .form-wizard-steps li:last-child::after {
+      width: 50%;
+    }
+    .form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
+      background-color: #3a0ca3;
+      color: #ffffff;
+    }
+    .form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
+      background-color: #3a0ca3;
+      left: 50%;
+      width: 50%;
+      border-color: #3a0ca3;
+    }
+    .form-wizard .form-wizard-steps li.activated::after {
+      width: 100%;
+      border-color: #3a0ca3;
+    }
+    .form-wizard .form-wizard-steps li:last-child::after {
+      left: 0;
+    }
+    .form-wizard .wizard-password-eye {
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    @keyframes click-radio-wave {
+      0% {
+        width: 25px;
+        height: 25px;
+        opacity: 0.35;
+        position: relative;
+      }
+      100% {
+        width: 60px;
+        height: 60px;
+        margin-left: -15px;
+        margin-top: -15px;
+        opacity: 0.0;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .wizard-content-left {
+        height: auto;
+      }
+    }

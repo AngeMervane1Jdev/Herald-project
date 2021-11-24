@@ -10,7 +10,7 @@
 
      
 
-    .body {
+body {
       background-color: rgb(218, 228, 248);
       
       color: #000000;
@@ -75,17 +75,15 @@
       font-size: 38px;
       font-weight: 600;
       text-align: center;
-      font-weight: 700;
       text-align: center;
       font-size: 30px;
       
       text-transform: uppercase;
       background: linear-gradient(90deg, #000, #3a0ca3, #000);
-      letter-spacing: 5px;
+     
       -webkit-background-clip: text;
       background-clip: text;
       background-repeat: no-repeat;
-      background-size: 80%;
       position: relative;
     }
     .form-wizard .form-wizard-header {

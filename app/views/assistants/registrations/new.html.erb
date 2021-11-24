@@ -1,0 +1,119 @@
+
+<div class="container d-flex justify-content-center my-5" >
+    <div class="row my-2 mx-2">
+        <!--left-column-->
+        <div class="col-md-4 col-12 mycol shadow">
+            <!--image--> <img src="/images/ass.jpg" width="100%" height="100%"> </div>
+        <!--right-column-->
+        <div class="col-md-8 col-12 xcol shadow">
+            <h2 class="title pt-5 pb-3">Création de compte assistant</h2>
+           <%= form_for(resource, as: resource_name, url: registration_path(resource_name),class:'myform') do |f| %>
+
+                <div class="row rone">
+                    <div class="form-group col-md-6 fone py-3"> <%= f.text_field :nom, autofocus:"true", autocomplete: "nom" ,class:"form-control",placeholder:"Votre Nom"%> </div>
+                    <div class="form-group col-md-6 ftwo py-3"> <%= f.text_field :prenoms,  autocomplete: "prenom" ,class:"form-control",placeholder:"Vos prénoms"%></div>
+                </div>
+                <div class="row rtwo">
+                    <div class="form-group col-md-6 fthree py-3"><%= f.text_field :contact,  autocomplete: "contact" ,class:"form-control",placeholder:"Votre Numéro de téléphone"%></div>
+                    <div class="form-group col-md-6 ffour py-3">  <%= f.email_field :email,  autocomplete: "email" ,class:"form-control",placeholder:"Votre Adresse E-mail"%></div>
+                </div>
+                <div class="row rthree">
+                    <div class="form-group col-md-6 ffive py-3"> <%= f.password_field :password, autocomplete: "new-password" ,placeholder:"Mot de passe (6 caracters au moins)",class:"form-control"%></div>
+                    <div class="form-group col-md-6 fsix py-3">  <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"Mot de passe (confirmation)" ,class:"form-control"%> </div>
+                </div>
+                <div class="row rfour">
+                    <div class="form-group col-md-6 fseven py-3"> <button type="submit" class="btn btn-primary"><span>Créer Mon compte</span></button> </div>
+                    <div class="form-group col-md-6 feight py-3">
+                        <p class="text-muted">J'ai déjà un compte<br><%= link_to 'Je me connecte', new_assistant_session_path,style:"background-color:rgb(218, 228, 248)" %></p>
+                    </div>
+                </div>
+            
+            <% end %>
+            
+        </div>
+    </div>
+</div>								                            
+
+
+<style>
+@media (max-width: 45rem) {
+  .mycol{
+    display:none;
+  }
+  
+}
+
+.mycol {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.xcol {
+    padding-left: 50px;
+    padding-right: 50px
+}
+
+.title {
+    font-weight: bold;
+    color: black;
+    box-shadow: 0px 1px 0px 0px;
+    margin-bottom:10px
+}
+
+.btn {
+    background-color: #6200EA;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0
+}
+
+.btn span {
+    font-size: 15px;
+    font-weight: bold
+}
+
+a {
+    text-decoration: underline;
+    color: orange !important;
+}
+
+.form-control {
+    border: none;
+    box-shadow: 0px 0.1px 0px 0px #dae0e5;
+    border-radius: 0;
+    background-color: white;
+
+}
+
+.jk,
+.lm {
+    box-shadow: 0px 1.5px 0px 0px #dae0e5 !important
+}
+
+.form-contro input [type="text"],
+.form-control input [type="email"],
+.form-control input [type="password"] {
+    color: black
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: 0px 1.5px 0px 1.5px #dae0e5 !important
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 0;
+    transition: all 300ms;
+    opacity: 0.2
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
+    font-size: 80% !important;
+    transform: translate3d(0, -100%, 0) !important;
+    opacity: 1 !important
+}
+</style>

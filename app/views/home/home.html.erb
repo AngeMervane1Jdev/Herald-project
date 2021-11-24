@@ -1,6 +1,32 @@
 <div class="continer">
 
    <%= link_to 'Registration', new_user_registration_path, class: 'btn btn-primary' %>
+   
 
+   
+   <% if current_user.present?  %>
+      <%= link_to 'Deconnexion', destroy_user_session_path, class: 'link',method:"delete" %>
+      <% elsif current_administrateur.present? %>
+       <%= link_to 'Deconnexion', destroy_administateur_session_path, class: 'link',method:"delete" %>
+      <% elsif current_assistant.present? %>
+        <%= link_to 'Deconnexion', destroy_assistant_session_path, class: 'link',method:"delete" %>
+   <% end %>
+   
+
+   <% if current_user.present? and current_user.pme==nil %>
+      <% render partial:"pmes/new",locals:{pme: @pme}%>
+       <%=current_user.name%>
+   <% end %>
+
+   
+   <% if current_user.present? and current_user.pme !=nil %>
+   
+   <% if current_user.discussions.count=0 %>
+       <%= link_to 'Démarrer une discussion', new_disussion_path, class: 'link' %>
+   <% end %>
+   
+     
+   <% end %>
+   
    
 </div>

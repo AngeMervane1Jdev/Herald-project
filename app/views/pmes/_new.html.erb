@@ -1,126 +1,193 @@
-<h1>New Pme</h1>
-<%= pme.inspect %>
- <fieldset class="wizard-fieldset" id="second">
-            <%= form_with(model: pme) do |form| %>
 
-                <% if pme.present? and pme.errors.any? %>
-                    <% designation = pme.errors.include?(:designation) %>
-                    <% raison = pme.errors.include?(:raison) %>
-                    <% address = pme.errors.include?(:address) %>
-                    <% email = pme.errors.include?(:email) %>
-                    <% contact =pme.errors.include?(:contact) %>
-                    <% state = pme.errors.include?(:state) %>
-                <% end %>
+<div class='body'>
+  <div class="container">
+    <section class="wizard-section">
+      <div class="row no-gutters">
+        <div class="col-lg-6 col-md-6" id="mycol">
+          <div class="wizard-content-left d-flex justify-content-center align-items-center" style="background-image: url('/images/2.jpg');background-size:cover">
+            <h1> Finalisez votre compte
+            </h1>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="form-wizard">
+              
+            <div class="form-wizard-header">
+                <p>Bienvenue sur HERALD</p>
+                <ul class="list-unstyled form-wizard-steps clearfix" >
+                  <li class="active"><span>1</span></li>
+                  <li class="active"><span>2</span></li>
+                </ul>
+              </div>
+            <fieldset class="wizard-fieldset show" id="second">
+                <%= form_with(model: pme) do |form| %>
 
-            <h5>Sociéte Information</h5>
-             
-              <div class="row">
+                    <% if pme.present? and pme.errors.any? %>
+                        <% designation = pme.errors.include?(:designation) %>
+                        <% raison = pme.errors.include?(:raison) %>
+                        <% sector = pme.errors.include?(:sector) %>
+                        <% address = pme.errors.include?(:address) %>
+                        <% email = pme.errors.include?(:email) %>
+                        <% contact =pme.errors.include?(:contact) %>
+                        <% state = pme.errors.include?(:state) %>
+                        <% status = pme.errors.include?(:status) %>
+                    <% end %>
+
+                <h5>Informations concernant la Sociéte</h5>
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <% if designation %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                        <%=form.text_field :designation ,class:"form-control wizard-required",id:"nameS"%>
+                        <label for="nameS" class="wizard-form-text-label">Nom de la société</label>
+                        <div class="wizard-form-error"></div>
+                        <% if designation %>
+                            <% pme.errors.full_messages_for(:designation).each do |error_message| %>
+                            <p> <%= error_message %>.</p>
+                            <% end %>
+                        <% end %>
+                    </div>
+                    </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="form-group">
-                      <%=form.text_field :designation ,class:"form-control wizard-required",id:"nameS"%>
-                      <label for="nameS" class="wizard-form-text-label">Nom de la société</label>
-                      <div class="wizard-form-error"></div>
-                      <% if designation %>
-                         <% pme.errors.full_messages_for(:designation).each do |error_message| %>
-                           <p> <%= error_message %>.</p>
-                          <% end %>
-                      <% end %>
-                  </div>
+                    <% if raison %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                    <%=form.text_field :raison ,class:"form-control wizard-required",id:"honame"%>
+                       <label for="honame" class="wizard-form-text-label">Raison Sociale</label>
+                        <div class="wizard-form-error"></div>
+                        <% if raison %>
+                            <% pme.errors.full_messages_for(:raison).each do |error_message| %>
+                            <p> <%= error_message %>.</p>
+                            <% end %>
+                        <% end %>
+                    </div>
                 </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="form-group">
-                    <input type="text" class="form-control wizard-required" id="honame" name="raison">
-                    <label for="honame" class="wizard-form-text-label">Raison Sociale</label>
-                    <div class="wizard-form-error"></div>
-                     <% if raison %>
-                         <% challenge.errors.full_messages_for(:raison).each do |error_message| %>
-                           <p> <%= error_message %>.</p>
-                          <% end %>
-                      <% end %>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="form-group">
-                    <input type="text" class="form-control wizard-required" id="address" name="address">
-                    <label for="lieu" class="wizard-form-text-label">Adresse</label>
-                    <div class="wizard-form-error"></div>
-                     <% if address %>
-                         <% challenge.errors.full_messages_for(:address).each do |error_message| %>
-                           <p> <%= error_message %>.</p>
-                          <% end %>
-                      <% end %>
+                <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                   <% if address %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                      <%=form.text_field :address ,class:"form-control wizard-required",id:"address"%>
+                        <label for="lieu" class="wizard-form-text-label">Adresse</label>
+                        <div class="wizard-form-error"></div>
+                        <% if address %>
+                            <% pme.errors.full_messages_for(:address).each do |error_message| %>
+                            <p> <%= error_message %>.</p>
+                            <% end %>
+                        <% end %>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="form-group">
-                     <label for="sector" class="wizard-form-text-label">Secteur d'activité</label>
-                      <select class="form-control" name="sector">
-                        <option value=""></option>
-                        <option value="primaire">Primaire</option>
-                        <option value="secondaire">Secondaire</option>
-                        <option value="tertiaire">Tertiaire</option>
-										</select>
-                  </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control wizard-required" id="email" name="email">
-              <label for="email" class="wizard-form-text-label">Email de la société</label>
-              <div class="wizard-form-error"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <% if sector %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                        <label for="sector" class="wizard-form-text-label">Secteur d'activité</label>
+                        <select class="form-control" name="pme[sector]">
+                            <option value=""></option>
+                            <option value="primaire">Primaire</option>
+                            <option value="secondaire">Secondaire</option>
+                            <option value="tertiaire">Tertiaire</option>
+                                            </select>
+                    </div>
+                </div>
+                </div>
                <% if email %>
-                  <% challenge.errors.full_messages_for(:email).each do |error_message| %>
-                    <p> <%= error_message %>.</p>
-                  <% end %>
-                <% end %>
-            </div>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+              <%=form.email_field :email ,class:"form-control wizard-required",id:"email",autocomplete:"email"%>
+
+                <label for="email" class="wizard-form-text-label">Email de la société</label>
+                <div class="wizard-form-error"></div>
+                <% if email %>
+                    <% pme.errors.full_messages_for(:email).each do |error_message| %>
+                        <p> <%= error_message %>.</p>
+                    <% end %>
+                    <% end %>
+                </div>
+                
+                            
+                <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <% if status %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                    <label for="statut" class="wizard-form-text-label">Statut Juridique</label>
+                        <select class="form-control" name="pme[status]">
+                            <option value=""></option>
+                            <option value="primaire">EI</option>
+                            <option value="secondaire">EIRL</option>
+                            <option value="primaire">SARL</option>
+                            <option value="secondaire">SA</option>
+                            <option value="tertiaire">SAS/SASU</option>
+                            <option value="tertiaire">SNC</option>
+                                            </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <% if state %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                    <%=form.text_field :state ,class:"form-control wizard-required",id:"state"%>
+                    <label for="ville" class="wizard-form-text-label">Ville</label>
+                    <div class="wizard-form-error"></div>
+                    <% if state %>
+                            <% pme.errors.full_messages_for(:state).each do |error_message| %>
+                            <p> <%= error_message %>.</p>
+                            <% end %>
+                        <% end %>
+                    </div>
+                </div>
+                </div>
             
-                          
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="form-group">
-                <label for="statut" class="wizard-form-text-label">Statut Juridique</label>
-                    <select class="form-control" name="status">
-                        <option value=""></option>
-                        <option value="primaire">EI</option>
-                        <option value="secondaire">EIRL</option>
-                         <option value="primaire">SARL</option>
-                        <option value="secondaire">SA</option>
-                        <option value="tertiaire">SAS/SASU</option>
-                        <option value="tertiaire">SNC</option>
-										</select>
+                <% if contact %>
+                      <div class="form-group focus-input">
+                      <% else %>
+                       <div class="form-group">
+                   <% end %>
+                <%=form.number_field :contact ,class:"form-control wizard-required",id:"contact"%>
+                <label for="contact" class="wizard-form-text-label">Contact</label>
+                <div class="wizard-form-error"></div>
+                <% if contact %>
+                    <% pme.errors.full_messages_for(:contact).each do |error_message| %>
+                        <p> <%= error_message %>.</p>
+                    <% end %>
+                <% end %>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="form-group">
-                  <input type="text" class="form-control wizard-required" id="ville" name="state">
-                  <label for="ville" class="wizard-form-text-label">Ville</label>
-                  <div class="wizard-form-error"></div>
-                   <% if state %>
-                         <% challenge.errors.full_messages_for(:state).each do |error_message| %>
-                           <p> <%= error_message %>.</p>
-                          <% end %>
-                      <% end %>
+            
+                <div class="form-group clearfix">
+                <%= form.submit 'Enrégistrer', class:"form-wizard-submit float-right" %>
+            
                 </div>
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <input type="number" class="form-control wizard-required" id="contact" name="contact">
-              <label for="contact" class="wizard-form-text-label">Contact</label>
-              <div class="wizard-form-error"></div>
-               <% if contact %>
-                  <% challenge.errors.full_messages_for(:contact).each do |error_message| %>
-                    <p> <%= error_message %>.</p>
-                  <% end %>
-              <% end %>
-            </div>
-           
-            <div class="form-group clearfix">
-            <%= form.submit 'Enrégistrer', class:"form-wizard-submit float-right" %>
-         
-            </div>
-             <% end %>
-          </fieldset>	
-          
+                <% end %>
+            </fieldset>	
+        </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+@media(max-width: 45rem) {
+  #mycol{
+    display:none
+  }
+}
+</style>

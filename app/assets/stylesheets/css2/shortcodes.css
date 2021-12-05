@@ -189,7 +189,7 @@
   position: relative;
   margin-top: -240px;
   border-bottom: 3px solid #fff;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -248,7 +248,8 @@
 .box-service.active .icon {
   background-color: rgb(44, 44, 202);
   color: #fff;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px rgb(236, 218, 218)
+ 
 }
 .box-service.active {
   border-bottom: 3px solid #ff7029;
@@ -264,7 +265,7 @@
   padding: 20px 0;
   margin-top: -55px;
   position: relative;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px rgb(236, 218, 218);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -639,7 +640,7 @@
   left: 9%;
   border-radius: 5px;
   border-bottom: 3px solid #fff;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px  rgb(236, 218, 218)
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -801,9 +802,8 @@
   left: 6%;
   bottom: -8%;
   border-radius: 5px;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-}
-.style-2 .box-team .team-info .team-tittle {
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);
+}.style-2 .box-team .team-info .team-tittle {
   margin-bottom: 8px;
 }
 .style-2 .box-team .icon-social-team {
@@ -1005,9 +1005,9 @@
   padding: 4px 0 40px 3px;
   margin: -30px 21px 0 0;
   background-color: #fff;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);
 }
-.box-work .text-wrap::before {
+  .box-work .text-wrap::before {
   content: "";
   width: 85%;
   height: 3px;
@@ -1309,9 +1309,8 @@
   background-color: #fff;
   border-bottom: 3px solid #ff7029;
   margin: 35px 0px 0 0px;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-}
-.row-question-slider .box-question .author {
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);}
+  .row-question-slider .box-question .author {
   display: flex;
   display:-webkit-box;
   display: -ms-flexbox;
@@ -1414,8 +1413,8 @@
 }
 .swiper-container.style-2{
   margin: 0 !important;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-} 
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);}
+
 .swiper-container.style-2 .swiper-slide {
   width: 390px;
 }
@@ -1428,9 +1427,8 @@
   background-color: #fff;
   border-bottom: 0px ;
   margin: 0;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-}
-.style-2 .row-question-slider .box-question p,
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);}
+  .style-2 .row-question-slider .box-question p,
 .style-2 .row-question-slider .box-question span.fa,
 .style-2 .row-question-slider .box-question img {
   margin: 0;
@@ -1473,13 +1471,11 @@
   letter-spacing: -0.7px !important;
 }
 .owl-carousel .owl-stage-outer {
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-}
-.owl-carousel .item.acticle {
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);}
+  .owl-carousel .item.acticle {
   cursor: w-resize;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-}
-.owl-carousel .item.acticle .tittle-articLes {
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);}
+  .owl-carousel .item.acticle .tittle-articLes {
   color: #000;
   padding-bottom: 50px;
 }
@@ -1952,7 +1948,7 @@
   display:-webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);
   margin-bottom: 26px;
   border-left: 3px solid rgb(44, 44, 202) ;
   margin-right: 57px;
@@ -2195,7 +2191,7 @@
   margin-bottom: 55px !important;
 }   
 .box-pricing {
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
+  box-shadow: 0 10px 30px  rgb(236, 218, 218);
   padding-bottom: 40px;
 }
 
@@ -2633,8 +2629,7 @@
 }
 .question-faq .active .infor-question {
   padding: 26px 0 26px 28px;
-  box-shadow: 0 10px 30px rgb(0 0 0 7%);
-}
+  box-shadow: 0 10px 30px  rgb(236, 218, 218)}
 
 .experience-left {
   background-color: #F0F4F9;

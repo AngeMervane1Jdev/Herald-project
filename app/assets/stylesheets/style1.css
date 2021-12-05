@@ -803,7 +803,7 @@ body.page #main-content {
   width: 100%;
   z-index: 9999;
 }
-#site-header..is-small .wrap-inner {
+#site-header .is-small .wrap-inner {
   padding-top: 45px;
   padding-bottom: 45px;
 }

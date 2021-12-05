@@ -2219,9 +2219,7 @@
   padding: 20px 61px;
   border-radius: 5px;
 }
-.style-2 .load-more .btn-load-more:hover {
-  background-color: #ff7029;
-}
+
 /* Pricing
 ......................................... */
 .margin-top-17 {
@@ -2271,11 +2269,7 @@
 .box-pricing .choose-a-plan {
   padding:35px 0 0 85px;
 }
-.box-pricing.active .choose-a-plan a:hover,
-.box-pricing .choose-a-plan a:hover {
-  background-color: #ff7029;
-  border:1px solid #ff7029;
-}
+
 .box-pricing .choose-a-plan a {
   border: 1px solid rgb(44, 44, 202);
   border-radius: 7px;

@@ -79,41 +79,7 @@
 .tp-bannertimer {
   display: none;
 }
-.rev_slider span.heading-tittle {
-  letter-spacing: 3.5px !important;
-}
-.rev_slider .tittle1 {
-  font-family: "Teko", sans-serif;
-  color: #000;
-  letter-spacing: -1.5px !important;
-}
-.rev_slider .line {
-  background-color:rgba(31,36,44,0.3) ;
-  width: 500px;
-  height: 1px;
-}
 
-.rev_slider .btn.get-a-quote {
-  background-color: rgb(44, 44, 202);
-  border-radius: 7px;
-  padding: 19.5px 56px;
-  border-style: solid;
-  font-family: "Rubik", sans-serif;
-  color: #fff;
-  font-weight: 500;
-  font-size: 15px;
-}
-.rev_slider .btn.get-a-quote:hover {
-  background-color: #ff7029;
-  color: #fff;
-}
-
-.rev_slider .content-color {
-  background-color: #fff !important;
-  border-radius: 5px !important;
-  width: 648px !important;
-  height: 494px !important;
-}
 .tp-simpleresponsive img {
   margin-left: 6px !important;
 }

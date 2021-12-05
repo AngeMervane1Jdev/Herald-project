@@ -102,26 +102,7 @@
 	.themesflat-headings.style-2 .heading {
 		font-size: 62px;
 	}
-  /* rev-slider */
-  .rev_slider .tp-img-1 img {
-	object-fit: cover;
-	/* width: 730px !important; */
-	height: 520px !important;
-}
-   .rev_slider .tp-img img {
-	   width: 350px !important;
-	   height: 300px !important;
-   }
-	.rev_slider .content-color {
-	  width: 530px !important;
-	  height: 400px !important;
-	}
-	.fullwidthbanner-container-fluid {
-	  margin-left: -62px;
-	}
-	.rev_slider .line {
-		width:400px;
-	   }
+   
 	/* service */
 	.box-service {
 	  margin-top: -143px;
@@ -658,17 +639,6 @@
 	}
 	.themesflat-headings .heading-shadown-text {
 		font-size: 100px;
-	}
-	/* rev-slider */
-	.rev_slider .tp-img-1 img {
-	  display: none;
-	}
-	.rev_slider .content-color {
-	  width: 350px !important;
-	  height: 350px !important;
-	}
-	.rev_slider .line {
-	 width: 290px;
 	}
 	#rev-slider1 .btn.get-a-quote {
 	  padding: 15px 30px;

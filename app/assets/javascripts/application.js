@@ -14,6 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
+//= require wow
+//= require swiper
 //= require jquery_ujs
 //= require jquery/dist/jquery.js 
 //= require_tree .

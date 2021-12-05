@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_123957) do
+ActiveRecord::Schema.define(version: 2021_11_25_224541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,16 +50,13 @@ ActiveRecord::Schema.define(version: 2021_11_24_123957) do
     t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "send_by"
     t.bigint "discussion_id"
-    t.bigint "user_id"
-    t.bigint "assistant_id"
-    t.index ["assistant_id"], name: "index_commentaires_on_assistant_id"
     t.index ["discussion_id"], name: "index_commentaires_on_discussion_id"
-    t.index ["user_id"], name: "index_commentaires_on_user_id"
   end
 
   create_table "discussions", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.string "titre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -110,9 +107,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_123957) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "commentaires", "assistants"
   add_foreign_key "commentaires", "discussions"
-  add_foreign_key "commentaires", "users"
   add_foreign_key "discussions", "assistants"
   add_foreign_key "discussions", "users"
   add_foreign_key "pmes", "users"

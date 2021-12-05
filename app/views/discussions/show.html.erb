@@ -1,0 +1,5 @@
+
+      <div id="commentaires_area" class="commentaires_area_form">
+        <!-- 投稿されたコメント一覧をdiscussionの詳細ページに表示するためのrender -->
+        <%= render partial: 'commentaires/index', locals: { commentaires: @commentaires, discussion: @discussion } %>
+      </div>

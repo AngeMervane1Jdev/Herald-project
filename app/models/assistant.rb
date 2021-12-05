@@ -4,5 +4,5 @@ class Assistant < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-      has_many :discussions, dependent: :type
+      has_many :discussions, dependent: :destroy
 end

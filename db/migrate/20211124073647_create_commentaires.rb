@@ -3,8 +3,7 @@ class CreateCommentaires < ActiveRecord::Migration[6.1]
     create_table :commentaires do |t|
       t.text :message
       t.timestamps
+      t.string :send_by
     end
-    add_reference :commentaires, :discussion, foreign_key: true
-    add_reference :commentaires, :user, foreign_key: true
   end
 end

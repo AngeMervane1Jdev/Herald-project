@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :position,presence:true
 
   has_one :pme
-  has_many :discussions, dependent: :type
+  has_many :discussions, dependent: :destroy
   # Include default devise modules. Others available are:
   #  :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

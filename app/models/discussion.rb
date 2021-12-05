@@ -1,5 +1,6 @@
 class Discussion < ApplicationRecord
 
-     belongs_to :user, class_name: "user", foreign_key: "user_id"
-     belongs_to :assistance, class_name: "assistant", foreign_key: "assistant_id"
-end
+     belongs_to :user
+     has_many :commentaires, dependent: :destroy
+     belongs_to :assistant,optional:true
+end 

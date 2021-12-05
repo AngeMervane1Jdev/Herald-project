@@ -1,0 +1,27 @@
+<%= form_with(model: discuss) do |form| %>
+  <% if discuss.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(discuss.errors.count, "error") %> prohibited this discuss from being saved:</h2>
+
+      <ul>
+        <% discuss.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

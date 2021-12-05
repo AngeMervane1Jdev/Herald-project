@@ -176,14 +176,13 @@ main {
             <%= form.password_field :password ,placeholder:"Votre mot de passe"%>
            
             <%= form.submit "Se connecter"%>   
-            
-           
-           <% if current_path="/users/sign_in" %>
-              <%= link_to "S'inscrire", new_user_registration_path, class: 'link ' %>
-              <% elsif current_path="/assistants/sign_in"%>
-              <%= link_to "S'inscrire", new_assistant_registration_path, class: 'link ' %>
-              <% elsif current_path="/administrateurs/sign_in" %>
-              <%= link_to "S'inscrire", new_administrateur_registration_path, class: 'link ' %>
+     
+           <% if request.path=="/users/sign_in" %>
+                 <%= link_to "S'inscrire", new_user_registration_path, class: 'link ' %>
+            <% elsif request.path=="/assistants/sign_in"%>
+                 <%= link_to "S'inscrire", new_assistant_registration_path, class: 'link ' %>
+            <% elsif request.path=="/administrateurs/sign_in" %>
+                  <%= link_to "S'inscrire", new_administrateur_registration_path, class: 'link ' %>
            <% end %>
            
         <% end %>

@@ -4,11 +4,12 @@ class TableauController < ApplicationController
     
 
     def assistant
-       @discussions=Discussions.where(assistant_id:current_assistant.id).all
+       @discussions=Discussion.all
+       @my_discussions=Discussion.where(assistant_id:current_assistant.id).all
     end
 
     def user
-        @discussions=Discussions.where(user_id:current_user.id).all
+        @discussions=Discussion.where(user_id:current_user.id).all
      end
 
 end

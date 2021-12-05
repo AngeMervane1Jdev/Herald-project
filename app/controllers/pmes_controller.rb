@@ -1,6 +1,6 @@
 class PmesController < ApplicationController
   before_action :set_pme, only: %i[ show edit update destroy ]
-
+   before_action :authenticate_user!
   # GET /pmes or /pmes.json
   def index
     @pmes = Pme.all
@@ -12,7 +12,12 @@ class PmesController < ApplicationController
 
   # GET /pmes/new
   def new
+    if current_user.pme==nil
     @pme = Pme.new
+    else 
+      flash[:notice] = "Vous avez déjà enrégistré une société"
+      redirect_to user_dashboard_path
+    end
   end
 
   # GET /pmes/1/edit

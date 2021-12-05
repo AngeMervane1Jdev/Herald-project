@@ -1,22 +1,29 @@
-<%= form_with(model: commentaire) do |form| %>
+<%= form_with(model: [discussion, commentaire]) do |form| %>
   <% if commentaire.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(commentaire.errors.count, "error") %> prohibited this commentaire from being saved:</h2>
-
       <ul>
-        <% commentaire.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
+      <% commentaire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message %>
+    <%= form.text_area :message, class: "commentaire_input form-control",style:"" ,autofocus:true%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Envoyer"%>
   </div>
 <% end %>
+
+<style>
+
+.form-control:focus{
+  box-shadow:inset 0 -1px 0 black;
+  resize: none;
+  }
+  </style>

@@ -101,7 +101,7 @@
 					  .children('ul')
 						  .removeAttr('style')
 						  .hide()
-						  .before('<span class="arrow"><i class="fa fa-arrows" aria-hidden="true"></i></span>');
+						  .before('<span class="arrow"></span>');
 		  } else {
 			  if ( $('body').is('.header-style-3') )
 				  wrapMenu = $('.site-navigation-wrap .inner');

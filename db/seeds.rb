@@ -19,7 +19,7 @@ end
    Discussion.create({user_id:i,category:'juridique',titre:'Discussion juridique'})
 end
 (1..5).each do |i|
-  1..2.each do |j|
+  (1..2).each do |j|
     Commentaire.create({send_by:"user",discussion_id:i,message:"Bonjour #{i}"})
   end
 end

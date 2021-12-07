@@ -28,7 +28,7 @@ class DiscussionsController < ApplicationController
   def create
 
     @discussion = Discussion.new
-    @discussion.category=params[:type]
+    @discussion.category=params[:category]
     @discussion.user_id=current_user.id
     @discussion.titre=current_user.name
 

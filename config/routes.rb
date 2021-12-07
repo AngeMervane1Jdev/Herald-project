@@ -1,24 +1,23 @@
 Rails.application.routes.draw do
 
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :pmes
   
 
-  get '/commencer-une-discussion/:type', to: 'discussions#create',as:"create_discussion" 
+  get '/commencer-une-discussion/:category', to: 'discussions#create',as:"create_discussion" 
 
   devise_for :users, controllers:{
-    registrations: 'users/registrations',
+    registrations: 'users/registrations'
   }
 
   devise_for :assistants, controllers:{
-    registrations: 'assistants/registrations',
+    registrations: 'assistants/registrations'
   }
   
   devise_for :administrateurs, controllers:{
-    registrations: 'administrateurs/registrations',
+    registrations: 'administrateurs/registrations'
   }
-  root to:"home#home"
+  root to: "home#index"
 
   get "/liste-des-discussions",to:"tableau#assistant", as:'assistant_dashboard'
   get "/mon-profile-utilisateur",to:"tableau#user", as:'user_dashboard'
@@ -29,6 +28,7 @@ Rails.application.routes.draw do
     resources :commentaires
   end
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   
 end

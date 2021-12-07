@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # ruby '2.7.0'
 gem 'wow-rails'
+gem 'thin'
 gem "font-awesome-rails"
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', github: 'sferik/rails_admin'

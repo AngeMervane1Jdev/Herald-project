@@ -24,14 +24,29 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
+    dashboard do
+      
+    end                  # mandatory
+    index do
+      
+    end                         # mandatory
     new
-    export
-    bulk_delete
-    show
-    edit
-    delete
+    export do
+      
+    end
+    bulk_delete do
+      
+    end
+    show do
+      
+    end
+
+    edit do
+      
+    end
+    delete do
+      
+    end
 
     ## With an audit adapter, you can add:
     # history_index

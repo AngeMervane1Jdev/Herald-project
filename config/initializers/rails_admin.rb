@@ -1,12 +1,17 @@
 RailsAdmin.config do |config|
 
+  config.authorize_with do |controller|
+    if current_administrateur==nil 
+      redirect_to main_app.new_administrateur_session_path, flash: {error: "Veuillez vous connectez"}
+     end
+  end
   ### Popular gems integration
 
   ## == Devise ==
-   config.authenticate_with do
-     warden.authenticate! scope: :administrateur
-   end
-   config.current_user_method(&:current_administrateur)
+  #  config.authenticate_with do
+  #    warden.authenticate! scope: :administrateur
+  #  end
+  #  config.current_user_method(&:current_administrateur)
 
   ## == CancanCan ==
    #config.authorize_with :cancancan
@@ -24,30 +29,15 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
-    dashboard do
-      
-    end                  # mandatory
-    index do
-      
-    end                         # mandatory
+    dashboard                # mandatory
+    index                       # mandatory
     new
-    export do
+    export
+    bulk_delete 
+    show
+    edit
+    delete
       
-    end
-    bulk_delete do
-      
-    end
-    show do
-      
-    end
-
-    edit do
-      
-    end
-    delete do
-      
-    end
-
     ## With an audit adapter, you can add:
     # history_index
     # history_show
